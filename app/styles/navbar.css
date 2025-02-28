@@ -1,0 +1,43 @@
+/* General navbar styling */
+.navbar {
+    padding: 15px 0;
+    border-bottom: 2px solid #eee;
+  }
+  
+  /* Navbar link padding */
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Logo Styling */
+  .brand-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    min-width: 220px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu .dropdown-item {
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  

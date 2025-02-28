@@ -1,0 +1,396 @@
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+  
+  .list-group-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+   ::-webkit-scrollbar { 
+    display: none; 
+  }
+  
+  
+  .gpu-card {
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .gpu-card:hover {
+    border: 1px solid rgba(0, 123, 255, 0.6); /* Blue glow */
+    /* box-shadow: inset 0 0 20px rgba(0, 123, 255, 0.4); */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+  }
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* 
+  .main-section {
+    width:80%;
+    margin:50px auto; 
+     clear:both;
+    }
+      .main-section:before, .main-section:after {
+        content:'';
+         display:table;
+          clear:both;
+        }
+  
+        .left-side {
+          width:250px; 
+          height:250px; 
+          float:left;
+          position:sticky; 
+          top:50px;
+            }
+  
+          */
+  
+          .main-section {
+            width: 90%;
+            margin: 80px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+          }
+          
+          /* Left Sidebar */
+          .left-side {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          
+          /* Tablet & Desktop Responsive Styling */
+          @media (min-width: 768px) {
+            .main-section {
+              width: 80%;
+              margin: 50px auto;
+              display: flex;
+              align-items: flex-start;
+            }
+          
+            .left-side {
+              width: 250px;
+              height: auto;
+              position: sticky;
+              top: 50px;
+            }
+          
+            .gpu-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+              gap: 20px;
+            }
+          }
+          
+          /* @media (min-width: 1024px) {
+            .gpu-container {
+              grid-template-columns: repeat(3, 1fr); 
+            }
+          } */
+            
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .main-section {
+              width: 90%;
+              margin: 50px auto;
+              display: flex;
+              align-items: flex-start;
+              gap: 20px;
+            }
+          
+            .left-side {
+              width: 220px; /* Reduce width to avoid overlap */
+              height: auto;
+              position: sticky;
+              top: 50px;
+            }
+          
+            .gpu-container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr); /* Ensure 2-column layout */
+              gap: 20px;
+            }
+          
+            .list-group {
+              width: 100%;
+            }
+          
+            .list-group-item {
+              font-size: 14px; /* Slightly reduce font size for better spacing */
+              padding: 10px;
+            }
+          }
+          
+          
+
+/* Base Card Styling */
+/* .feature-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  } */
+  
+  /* .feature-card:hover {
+    transform: translateY(-5px);
+  } */
+  
+  /* Background Colors */
+  /* .green-bg {
+    background-color: #e8fbe8;
+  } */
+  
+  /* .light-blue-bg {
+    background-color: #e6f1fc;
+  } */
+  
+  /* .blue-bg {
+    background-color: #cbe3fc;
+  } */
+  
+  /* .white-bg {
+    background-color: #ffffff;
+  } */
+  
+  /* Image Styling */
+  /* .feature-image {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    display: block;
+    margin: 1rem auto 0;
+  } */
+  
+  /* Responsive Fixes */
+  /* @media (max-width: 768px) {
+    .feature-card {
+      padding: 1.2rem;
+    }
+  } */
+  
+
+/* Base Styling for Cards */
+.feature-card {
+    padding: 1.7rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    min-height: 280px;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+/* Background Colors */
+.green-bg {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  color: white;
+}
+
+.blue-bg {
+  background: linear-gradient(135deg, #1E88E5, #64B5F6);
+  color: white;
+}
+
+.light-blue-bg {
+  background: linear-gradient(135deg, #42A5F5, #90CAF9);
+  color: white;
+}
+
+.white-bg {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Image Styling */
+.feature-image {
+    width: 50%;
+  /* Set max size */
+    height: 60%;
+    display: block;
+    border-radius: 20px;
+    margin: 1rem auto 0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 1.2rem;
+        text-align: center; /* Center text */
+    }
+    
+    .feature-image {
+        width: 90%; /* Resize for mobile */
+        margin-bottom: 10px;
+    }
+    
+    /* Stack image and text in mobile */
+    .flex-lg-row {
+        flex-direction: column !important;
+    }
+}
+
+
+
+/* Support Section Styles */
+.support-container {
+  background: linear-gradient(135deg, #ffffff, #f2f5f9);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Support Features Grid */
+.support-feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensures even spacing inside the box */
+  min-height: 180px; /* Ensures uniform card height */
+}
+
+.support-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Support Icons */
+.icon {
+  font-size: 40px;
+  color: #007bff; /* Bootstrap Primary Blue */
+  margin-bottom: 10px;
+}
+
+/* Text Styling */
+.support-feature h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #333;
+}
+
+.support-feature p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Support Image */
+.support-image {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .support-container {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .support-feature {
+    align-items: center;
+    text-align: center;
+    min-height: auto; /* Allows flexibility for smaller screens */
+  }
+
+  .icon {
+    font-size: 1.8rem; /* Adjust icon size for mobile */
+  }
+}
+
+
+
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Default - Mobile (Column Layout) */
+.reviewContainer,
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Tablet (768px - 1024px) - Reviews in Row, Contact in Column */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reviewContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Desktop & Laptop (1024px+) - Everything in a Single Row */
+@media (min-width: 1024px) {
+  .reviewSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviewContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+
+  .contactContainer {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+}
