@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="container py-5 mb-5 mt-5">
+    <section className="container py-5 mb-5 mt-5" style={{marginTop:"100px"}}>
       <div className="row align-items-center text-center text-md-start">
         
         {/* Left Content */}
