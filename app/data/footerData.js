@@ -1,3 +1,5 @@
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
 const footerSections = [
     {
       title: "COMPANY",
@@ -75,11 +77,11 @@ const footerSections = [
         { name: "Mail Server Support", href: "#" },
       ],
       extraTitle: "Contact",
-      extraLinks: [
-        { name: "sales@sixthstar.in", href: "mailto:sales@sixthstar.in", icon: "fa fa-envelope" },
-        { name: "support@sixthstar.in", href: "mailto:support@sixthstar.in", icon: "fa fa-envelope" },
-        { name: "+91 9962107399", href: "tel:+919962107399", icon: "fa-solid fa-phone" },
-        { name: "+91 9383996666", href: "tel:+919383996666", icon: "fa-solid fa-phone" },
+       extraLinks : [
+        { name: "sales@sixthstar.in", href: "mailto:sales@sixthstar.in", icon: <FaEnvelope /> },
+        { name: "support@sixthstar.in", href: "mailto:support@sixthstar.in", icon: <FaEnvelope /> },
+        { name: "+91 9962107399", href: "tel:+919962107399", icon: <FaPhoneAlt /> },
+        { name: "+91 9383996666", href: "tel:+919383996666", icon: <FaPhoneAlt /> },
       ],
     },
   ];

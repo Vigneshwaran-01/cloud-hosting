@@ -5,6 +5,7 @@ import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import footerSections from '../data/footerData'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   useEffect(() => {
@@ -12,6 +13,16 @@ const Footer = () => {
       require("bootstrap/dist/js/bootstrap.bundle.min");
     }
   }, []);
+
+
+  const socialLinks = [
+    { icon: <FaYoutube />, url: "#", color: "#FF0000" },
+    { icon: <FaFacebook />, url: "#", color: "#1877F2" },
+    { icon: <FaTwitter />, url: "#", color: "#000000" },
+    { icon: <FaInstagram />, url: "#", color: "#C13584" },
+    { icon: <FaLinkedin />, url: "#", color: "#0077B5" },
+  ];
+
   return (
     <footer className="bg-primary text-white  py-4 mx-auto" >
       <div className="mx-5  ">
@@ -147,7 +158,7 @@ const Footer = () => {
           <ul className="list-unstyled">
             {section.extraLinks.map((link, linkIdx) => (
               <li key={linkIdx} className="mb-2 d-flex align-items-lg-center gap-2">
-                {link.icon && <i className={`${link.icon}`}></i>}
+                {link.icon}
                 <a href={link.href} className="text-white text-decoration-none small">
                   {link.name}
                 </a>
@@ -166,29 +177,28 @@ const Footer = () => {
         {/* Social Icons and Copyright */}
         <div className="row ">
           <div className="col-12 text-center">
-            <div className="d-flex justify-content-center gap-3 mb-3">
-              {[
-                "fa-youtube",
-                "fa-facebook",
-                "fa-x-twitter",
-                "fa-instagram",
-                "fa-linkedin",
-              ].map((icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="btn p-2 btn-outline-light btn-sm d-flex justify-content-center rounded-circle"
-                  style={{ width: "30px", height: "30px" }}
-                >
-                  <i className={`fa-brands w-100 h-100 ${icon} `}></i>
-                </a>
-              ))}
-            </div>
+          <div className="d-flex justify-content-center gap-3 mb-3">
+      {socialLinks.map((social, idx) => (
+        <a
+          key={idx}
+          href={social.url}
+          className="d-flex align-items-center justify-content-center rounded-circle text-white"
+          style={{
+            width: "30px",
+            height: "30px",
+            backgroundColor: social.color,
+          }}
+        >
+          {social.icon}
+        </a>
+      ))}
+    </div>
             <p className="small mb-0 pb-2 border-bottom border-light">
               © Copyright 2024 | All Rights Reserved by{" "}
               <Link href="#" className="text-white text-decoration-none">
                 Sixthstar tech
               </Link>
+              <i className='fa-brands bg-success text-white fa-youtube'></i>
             </p>
           </div>
         </div>

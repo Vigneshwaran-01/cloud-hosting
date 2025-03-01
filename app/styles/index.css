@@ -278,12 +278,12 @@
 
 /* Support Features Grid */
 .support-feature {
-  background: white;
+
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,10 +291,6 @@
   min-height: 180px; /* Ensures uniform card height */
 }
 
-.support-feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
 
 /* Support Icons */
 .icon {
@@ -392,5 +388,46 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: 2rem;
+  }
+}
+
+
+
+
+
+
+
+/* Hosting Banner Styles */
+.hosting-banner {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styling */
+.talk-btn, .phone-btn {
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.talk-btn:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.phone-btn:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .hosting-banner {
+    padding: 3rem 1.5rem;
+  }
+
+  .talk-btn, .phone-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

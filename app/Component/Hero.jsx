@@ -31,7 +31,7 @@ export default function HeroSection() {
           <Image 
             src="https://images.unsplash.com/photo-1718154621928-a14709d0c768?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fG52ZGlhJTIwZ3B1JTIwY2xvdW5kfGVufDB8fDB8fHww" 
             alt="GPU Cloud" 
-            width={500} 
+            width={600} 
             height={350} 
             className="img-fluid"
           />

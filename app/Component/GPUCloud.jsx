@@ -139,7 +139,7 @@ export default function GPUPlans() {
        <div className="text-center mb-4 container">
         <h2 className="fw-bold">Powerful NVIDIA Cloud GPUs with Unmatched Performance</h2>
         <p className="lead">
-          MilesWeb's cloud GPU services are the best in the overall industry. With various resources, 
+          SixthStar cloud GPU services are the best in the overall industry. With various resources, 
           top-notch hardware, and processors, you get unbeatable performance for all your heavy workloads.
         </p>
       </div>

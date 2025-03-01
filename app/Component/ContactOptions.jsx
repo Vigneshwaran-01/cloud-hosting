@@ -22,7 +22,7 @@ export default function ContactOptions() {
           <div className="contact-item">
             <FaHeadphones size={30} className="icon" />
             <h5 className="fw-bold mt-2">Call Us</h5>
-            <p className="text-muted small">080 6959 0400</p>
+            <p className="text-muted small">9176647399</p>
           </div>
 
           {/* Divider */}
@@ -32,7 +32,7 @@ export default function ContactOptions() {
           <div className="contact-item">
             <FaEnvelope size={30} className="icon" />
             <h5 className="fw-bold mt-2">Email</h5>
-            <p className="text-muted small">sales@milesweb.com</p>
+            <p className="text-muted small">sales@sixthstar.in</p>
           </div>
         </div>
 

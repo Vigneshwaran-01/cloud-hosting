@@ -14,7 +14,7 @@ const Features = () => {
             <div className="feature-card green-bg h-100 d-flex flex-column">
               <h5 className="fw-bold">Multi-threaded computing</h5>
               <p>
-                MilesWeb brings top-notch hardware and power capabilities, and our users get the experience of
+                Sixthstar brings top-notch hardware and power capabilities, and our users get the experience of
                 lightning-fast performance. With our NVIDIA GPU cloud instances, you can tackle the complex
                 processing of multiple pixels simultaneously.
               </p>
@@ -51,7 +51,7 @@ const Features = () => {
             <div className="feature-card white-bg h-100 d-flex flex-column">
               <h5 className="fw-bold">NVIDIA-optimized GPU</h5>
               <p>
-                MilesWeb offers users an industry-leading GPU cloud platform, built in partnership with NVIDIA.
+                SixthStar offers users an industry-leading GPU cloud platform, built in partnership with NVIDIA.
               </p>
             </div>
           </div>
